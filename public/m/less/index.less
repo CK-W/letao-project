@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
 }
+// 顶部搜索栏
 #header {
     height: 45px;
     background-color: @mainColor;
@@ -22,10 +23,17 @@
         right: 15px;
         top: 15px;
     }
-    .mui-slider-indicator .mui-indicator {
-    width: 6px;
-    height: 6px;
-    margin: 1px 6px;
-    background-color: blue;  
-    }
+    
 } 
+
+//轮播图
+#banner {
+    .mui-slider .mui-slider-indicator .mui-indicator {
+        background-color: yellowgreen;  
+        width: 15px;
+        height: 15px;
+    }
+    .mui-slider-indicator .mui-active.mui-indicator {
+        background-color: yellow;
+    }
+}
