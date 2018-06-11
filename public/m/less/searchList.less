@@ -1,0 +1,74 @@
+@import 'base.less';
+
+#main {
+.mui-scroll-wrapper {
+    // position: relative;
+    .mui-scroll {
+        // position: relative;
+    }
+}
+    
+  // 搜索框
+  .sh-search {
+    position: relative;
+    form {
+      padding: 10px;
+      padding-right: 62px;
+      input {
+        margin-bottom: 0px;
+        height: 30px;
+        border-radius: 3px 0px 0px 3px;
+        font-size: 14px;
+        border-color: @mainColor;
+      }
+      a {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        height: 30px;
+        background-color: @mainColor;
+      }
+    }
+  }
+
+  // 商品搜索标题
+    .searchList-title {
+        height: 30px;
+        background-color: #cccccc;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        a {
+            color: black;
+            font-size: 14px;
+            span {
+                padding-left: 5px;
+            }
+        }
+    }
+    // 商品搜索列表
+    .searchList-list {
+        padding-top: 5px;
+        text-align: center;
+         .mui-row {
+       a {
+           display: block;
+           margin: 5px;
+           box-shadow: 0px 0px 10px#2678a1;
+            img {
+            width: 100%;
+            }
+            button {
+                margin-bottom: 5px;
+            }
+            .price {
+                color:#ccc;
+                span {
+                    color: red; 
+                }
+            }
+       }
+    }
+    }
+
+}

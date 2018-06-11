@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>搜索问题</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <!-- 强制竖屏 -->
+        <meta name=screen-orientation content=portrait>
+        <meta name=x5-orientation content=portrait>
+        <!-- UC强制全屏 -->
+        <meta name="full-screen" content="yes">
+        <!-- QQ强制全屏 -->
+        <meta name="x5-fullscreen" content="true">
+        <!-- UC应用模式 -->
+        <meta name="browsermode" content="application">
+        <!-- QQ应用模式 -->
+        <meta name="x5-page-mode" content="app">
+        <!-- IOS启用 WebApp 全屏模式 -->
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <!-- IOS全屏模式下隐藏状态栏/设置状态栏颜色 content的值为default | black | black-translucent -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <!-- 去除iphone 识别数字为号码邮箱跳转地图 -->
+        <meta name="format-detection" content="telephone=no,email=no,adress=no">
+        <link rel="stylesheet" href="../css/reset.css">
+        <link rel="stylesheet" href="../css/helpCenter.css">
+        <script src="../js/rem.js"></script>
+        <!--[if lt IE 9]>
+             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+             <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+          <![endif]-->
+    </head>
+    <body>
+        <section class="help_container">
+            <div class="search_input search_input_sub">
+                <form action="" method="post">
+                    <img src="../img/search_icons.png" alt="搜索">
+                    <input type="text" name="val"  placeholder="搜索问题" maxlength="25" class="input" autocomplete="off">
+                    <input type="button" value="搜索" class="search_sub">
+                </form>
+            </div>
+            <ul class="help_ul" style="display: none;">
+                <li>
+                    <a href="###">账号怎么充值？</a>
+                    <img src="../img/return.png" alt="" class="return">
+                </li>
+                <li>
+                    <a href="###">怎么将看到的视频分享到朋友圈？</a>
+                    <img src="../img/return.png" alt="" class="return">
+                </li>
+                <li>
+                    <a href="###">如何分享产品给客户？</a>
+                    <img src="../img/return.png" alt="" class="return">
+                </li>
+                <li>
+                    <a href="###">文字太小客户眼睛不好，运营又态度不好怎么办？</a>
+                    <img src="../img/return.png" alt="" class="return">
+                </li>
+            </ul>
+            <div class="searchHis" >
+                <div class="topHis">
+                    <p class="fl titHis">搜索历史</p>
+                    <p class="fr delHis" id="delHis" onclick="clearHistory()"><img src="../img/dels_help.png" alt="icon"> <span>清除</span></p>
+                </div>
+                <ul class="ulHis">
+
+                </ul>
+            </div>
+        </section>
+        <script src="../js/jquery1.7.js"></script>
+        <!-- <script src="../js/store.modern.min.js"></script>
+        <script src="../js/storeHistory.js"></script> -->
+        <script type="text/javascript">
+            initLocalStorage();
+            //点击搜索按钮
+            $(".search_sub").click(function() {
+                var value = $(".input").val();
+                setHistoryItems(value);
+            });
+            //标签搜索
+            $('.ulHis li').on('click',function(){
+                var text = $(this).text().trim();
+                setHistoryItems(text);
+            })
+            function initLocalStorage(){
+                let { historyItems } = localStorage;
+                console.log(historyItems+'--historyItems--')
+                if (historyItems !== undefined) {
+                    const onlyItem = historyItems.split('|');
+                    if (onlyItem.length > 0){
+                        key = '';
+                        for(var i = 0 ; i < onlyItem.length ; i++){
+                           key = key + '<li>'+ onlyItem[i] +'</li>'
+                        }
+                        $('.ulHis').html(key);
+                    }
+                }
+            }
+           function setHistoryItems(keyword) {
+                var maxNum = 5;
+                keyword = keyword.trim();
+                let { historyItems } = localStorage;
+                if (historyItems === undefined) {
+                    localStorage.historyItems = keyword;
+                    console.log(localStorage +'------')
+                } else {
+                    var onlyItem = historyItems.split('|').filter(e => e != keyword);
+                if (onlyItem.length >= 5){
+                    onlyItem = onlyItem.splice(0, maxNum - 1);
+                }
+                if (onlyItem.length > 0) historyItems = keyword + '|' + onlyItem.join('|');
+                    localStorage.historyItems = historyItems;
+                }
+           }
+
+           function clearHistory() {  
+            localStorage.removeItem('historyItems');   
+           }
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,51 @@
+@import './base.less';
+
+html,body {
+    height: 100%;
+}
+#main {
+    height: 100%;
+    display: flex;
+    background-color: #53464296;
+    .left {
+        flex-basis: 80px;
+        ul {
+            background-color: #ffffff;
+            li {
+                border-bottom: 1px solid #ccc;
+                border-right: 1px solid #ccc;
+                a {
+                    display: block;
+                    height: 45px;
+                    line-height: 45px;
+                    text-align: center;
+                    font-size: 16px;
+                    color: black;
+                }
+                &.active {
+                    background-color: skyblue;
+                }
+            }
+        }
+    }
+    .right {
+        position: relative;
+        flex: 1;
+        
+        .mui-scroll {
+            padding: 10px;
+            min-height: 101%; 
+            .mui-row {
+                background-color: #fff;
+                a {
+                    img {
+                        width: 100%;
+                    } 
+                    p {
+                        text-align: center;
+                    };
+                }
+            }
+        }
+    }
+}

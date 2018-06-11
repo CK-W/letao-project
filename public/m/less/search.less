@@ -1,0 +1,73 @@
+@import "./base.less";
+
+#main {
+  // 搜索框
+  .sh-search {
+    position: relative;
+
+    form {
+      padding: 10px;
+      padding-right: 62px;
+      input {
+        margin-bottom: 0px;
+        height: 30px;
+        border-radius: 3px 0px 0px 3px;
+        font-size: 14px;
+        border-color: @mainColor;
+      }
+      a {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        height: 30px;
+        background-color: @mainColor;
+      }
+    }
+  }
+  // 搜索历史
+  .sh-history {
+    padding: 0 10px;
+    height: 20px;
+    .top {
+      span,
+      a {
+        display: inline-block;
+        font-size: 14px;
+        line-height: 20px;
+        color: black;
+      }
+    }
+    .bottom {
+        padding-top: 10px;
+      ul {
+          border: 1px solid #ccc;
+        li {
+          border-bottom: 1px solid #ccc;
+          padding: 0px 10px;
+          height: 30px;
+          line-height: 30px;
+          &:last-child {
+              border-bottom: 0px;
+          }
+          a {
+            color: black;
+            // display: block;
+            //   height: 30px;
+            //   line-height: 30px;
+            span {
+              font-size: 14px;
+              height: 30px;
+              display: inline-block;
+              height: 30px;
+              line-height: 30px;
+              &:last-child {
+                  width: 20px;
+                  text-align: center;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

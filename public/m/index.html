@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,69 +17,363 @@
     <!-- 4、引入less的编译器文件less.js -->
     <script src="./lib/less/less.js"></script>
 </head>
+
 <body>
 
     <!-- 顶部搜索栏 -->
     <header id="header">
-        <h2>乐淘云购</h2>
+        <h4>乐淘云购</h4>
         <a href="#" class="fa fa-search" aria-hidden="true"></a>
     </header>
-    <!-- 轮播图 -->
-    <section id="banner">
-        <div class="mui-slider">
-            <!-- 轮播部分 -->
-            <div class="mui-slider-group mui-slider-loop">
-                <div class="mui-slider-item">
-                    <a href="#">
-                        <img src="images/banner4.png" />
-                    </a>
-                </div>
-                <div class="mui-slider-item">
-                    <a href="#">
-                        <img src="images/banner1.png" />
-                    </a>
-                </div>
-                <div class="mui-slider-item">
-                    <a href="#">
-                        <img src="images/banner2.png" />
-                    </a>
-                </div>
-                <div class="mui-slider-item">
-                    <a href="#">
-                        <img src="images/banner3.png" />
-                    </a>
-                </div>
-                <div class="mui-slider-item">
-                    <a href="#">
-                        <img src="images/banner4.png" />
-                    </a>
-                </div>
-                <div class="mui-slider-item">
-                    <a href="#">
-                        <img src="images/banner1.png" />
-                    </a>
-                </div>
-            </div>
-            <!-- 显示圆点 -->
-            <div class="mui-slider-indicator">
-                <div class="mui-indicator mui-active"></div>
-                <div class="mui-indicator"></div>
-                <div class="mui-indicator"></div>
-                <div class="mui-indicator"></div>
+
+    <!-- 区域滚动 -->
+    <div class="mui-scroll-wrapper">
+        <div class="mui-scroll">
+            <!-- 中间主体部分 -->
+            <div id="main">
+                <!-- 轮播图 -->
+                <section id="banner">
+                    <div class="mui-slider">
+                        <!-- 轮播部分 -->
+                        <div class="mui-slider-group mui-slider-loop">
+                            <div class="mui-slider-item">
+                                <a href="#">
+                                    <img src="images/banner4.png" />
+                                </a>
+                            </div>
+                            <div class="mui-slider-item">
+                                <a href="#">
+                                    <img src="images/banner1.png" />
+                                </a>
+                            </div>
+                            <div class="mui-slider-item">
+                                <a href="#">
+                                    <img src="images/banner2.png" />
+                                </a>
+                            </div>
+                            <div class="mui-slider-item">
+                                <a href="#">
+                                    <img src="images/banner3.png" />
+                                </a>
+                            </div>
+                            <div class="mui-slider-item">
+                                <a href="#">
+                                    <img src="images/banner4.png" />
+                                </a>
+                            </div>
+                            <div class="mui-slider-item">
+                                <a href="#">
+                                    <img src="images/banner1.png" />
+                                </a>
+                            </div>
+                        </div>
+                        <!-- 显示圆点 -->
+                        <div class="mui-slider-indicator">
+                            <div class="mui-indicator mui-active"></div>
+                            <div class="mui-indicator"></div>
+                            <div class="mui-indicator"></div>
+                            <div class="mui-indicator"></div>
+                        </div>
+                    </div>
+                </section>
+                <!-- 导航部分 -->
+                <nav id="navs">
+                    <div class="mui-row">
+                        <div class="mui-col-xs-4">
+                            <a href="">
+                                <img src="./images/nav1.png" alt="">
+                            </a>
+                        </div>
+                        <div class="mui-col-xs-4">
+                            <a href="">
+                                <img src="./images/nav2.png" alt="">
+                            </a>
+                        </div>
+                        <div class="mui-col-xs-4">
+                            <a href="">
+                                <img src="./images/nav3.png" alt="">
+                            </a>
+                        </div>
+                        <div class="mui-col-xs-4">
+                            <a href="">
+                                <img src="./images/nav4.png" alt="">
+                            </a>
+                        </div>
+                        <div class="mui-col-xs-4">
+                            <a href="">
+                                <img src="./images/nav5.png" alt="">
+                            </a>
+                        </div>
+                        <div class="mui-col-xs-4">
+                            <a href="">
+                                <img src="./images/nav6.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+                <!-- 广告区域 -->
+                <section id="ads">
+                    <div class="mui-row">
+                        <div class="mui-col-xs-8">
+                            <div class="mui-row">
+                                <div class="mui-col-xs-6">
+                                    <a href="">
+                                        <img src="./images/active1.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="mui-col-xs-6">
+                                    <a href="">
+                                        <img src="./images/active2.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="mui-col-xs-6">
+                                    <a href="">
+                                        <img src="./images/active4.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="mui-col-xs-6">
+                                    <a href="">
+                                        <img src="./images/active5.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mui-col-xs-4">
+                            <a href="">
+                                <img src="./images/active3.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <!-- 品牌专区 -->
+                <section id="brand">
+                    <div class="title">
+                        <a href="">
+                            <img src="./images/title0.png" alt="">
+                        </a>
+                    </div>
+                    <div class="mui-row">
+                        <div class="mui-col-xs-3">
+                            <a href="">
+                                <img src="./images/brand1.png" alt="">
+                            </a>
+                        </div>
+                        <div class="mui-col-xs-3">
+                            <a href="">
+                                <img src="./images/brand2.png" alt="">
+                            </a>
+                        </div>
+                        <div class="mui-col-xs-3">
+                            <a href="">
+                                <img src="./images/brand3.png" alt="">
+                            </a>
+                        </div>
+                        <div class="mui-col-xs-3">
+                            <a href="">
+                                <img src="./images/brand4.png" alt="">
+                            </a>
+                        </div>
+                        <div class="mui-col-xs-3">
+                            <a href="">
+                                <img src="./images/brand5.png" alt="">
+                            </a>
+                        </div>
+                        <div class="mui-col-xs-3">
+                            <a href="">
+                                <img src="./images/brand6.png" alt="">
+                            </a>
+                        </div>
+                        <div class="mui-col-xs-3">
+                            <a href="">
+                                <img src="./images/brand7.png" alt="">
+                            </a>
+                        </div>
+                        <div class="mui-col-xs-3">
+                            <a href="">
+                                <img src="./images/brand8.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <!-- 运动生活专区 -->
+                <section id="active">
+                    <div class="title">
+                        <a href="">
+                            <img src="./images/title1.png" alt="">
+                        </a>
+                    </div>
+                    <div class="mui-row">
+                        <div class="mui-col-xs-6">
+                            <a href="">
+                                <img src="./images/product.jpg" alt="">
+                                <p>匹敌耐克，狼嚎天下</p>
+                                <div class="price">
+                                    <span>￥1222</span>
+                                    <del>￥1222</del>
+                                </div>
+                                <button type="button" class="mui-btn mui-btn-primary">立即购买</button>
+                            </a>
+                        </div>
+                        <div class="mui-col-xs-6">
+                            <a href="">
+                                <img src="./images/product.jpg" alt="">
+                                <p>匹敌耐克，狼嚎天下</p>
+                                <div class="price">
+                                    <span>￥1222</span>
+                                    <del>￥1222</del>
+                                </div>
+                                <button type="button" class="mui-btn mui-btn-primary">立即购买</button>
+                            </a>
+                        </div>
+                        <div class="mui-col-xs-6">
+                            <a href="">
+                                <img src="./images/product.jpg" alt="">
+                                <p>匹敌耐克，狼嚎天下</p>
+                                <div class="price">
+                                    <span>￥1222</span>
+                                    <del>￥1222</del>
+                                </div>
+                                <button type="button" class="mui-btn mui-btn-primary">立即购买</button>
+                            </a>
+                        </div>
+                        <div class="mui-col-xs-6">
+                            <a href="">
+                                <img src="./images/product.jpg" alt="">
+                                <p>匹敌耐克，狼嚎天下</p>
+                                <div class="price">
+                                    <span>￥1222</span>
+                                    <del>￥1222</del>
+                                </div>
+                                <button type="button" class="mui-btn mui-btn-primary">立即购买</button>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <!-- 女士专区 -->
+                <section id="girl">
+                    <div class="title">
+                        <a href="">
+                            <img src="./images/title2.png" alt="">
+                        </a>
+                    </div>
+                    <div class="mui-row">
+                        <div class="mui-col-xs-6">
+                            <a href="">
+                                <img src="./images/product.jpg" alt="">
+                                <p>匹敌耐克，狼嚎天下</p>
+                                <div class="price">
+                                    <span>￥1222</span>
+                                    <del>￥1222</del>
+                                </div>
+                                <button type="button" class="mui-btn mui-btn-primary">立即购买</button>
+                            </a>
+                        </div>
+                        <div class="mui-col-xs-6">
+                            <a href="">
+                                <img src="./images/product.jpg" alt="">
+                                <p>匹敌耐克，狼嚎天下</p>
+                                <div class="price">
+                                    <span>￥1222</span>
+                                    <del>￥1222</del>
+                                </div>
+                                <button type="button" class="mui-btn mui-btn-primary">立即购买</button>
+                            </a>
+                        </div>
+                        <div class="mui-col-xs-6">
+                            <a href="">
+                                <img src="./images/product.jpg" alt="">
+                                <p>匹敌耐克，狼嚎天下</p>
+                                <div class="price">
+                                    <span>￥1222</span>
+                                    <del>￥1222</del>
+                                </div>
+                                <button type="button" class="mui-btn mui-btn-primary">立即购买</button>
+                            </a>
+                        </div>
+                        <div class="mui-col-xs-6">
+                            <a href="">
+                                <img src="./images/product.jpg" alt="">
+                                <p>匹敌耐克，狼嚎天下</p>
+                                <div class="price">
+                                    <span>￥1222</span>
+                                    <del>￥1222</del>
+                                </div>
+                                <button type="button" class="mui-btn mui-btn-primary">立即购买</button>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <!-- 男士专区 -->
+                <section id="boy">
+                    <div class="title">
+                        <a href="">
+                            <img src="./images/title3.png" alt="">
+                        </a>
+                    </div>
+                    <div class="mui-row">
+                        <div class="mui-col-xs-6">
+                            <a href="">
+                                <img src="./images/product.jpg" alt="">
+                                <p>匹敌耐克，狼嚎天下</p>
+                                <div class="price">
+                                    <span>￥1222</span>
+                                    <del>￥1222</del>
+                                </div>
+                                <button type="button" class="mui-btn mui-btn-primary">立即购买</button>
+                            </a>
+                        </div>
+                        <div class="mui-col-xs-6">
+                            <a href="">
+                                <img src="./images/product.jpg" alt="">
+                                <p>匹敌耐克，狼嚎天下</p>
+                                <div class="price">
+                                    <span>￥1222</span>
+                                    <del>￥1222</del>
+                                </div>
+                                <button type="button" class="mui-btn mui-btn-primary">立即购买</button>
+                            </a>
+                        </div>
+                        <div class="mui-col-xs-6">
+                            <a href="">
+                                <img src="./images/product.jpg" alt="">
+                                <p>匹敌耐克，狼嚎天下</p>
+                                <div class="price">
+                                    <span>￥1222</span>
+                                    <del>￥1222</del>
+                                </div>
+                                <button type="button" class="mui-btn mui-btn-primary">立即购买</button>
+                            </a>
+                        </div>
+                        <div class="mui-col-xs-6">
+                            <a href="">
+                                <img src="./images/product.jpg" alt="">
+                                <p>匹敌耐克，狼嚎天下</p>
+                                <div class="price">
+                                    <span>￥1222</span>
+                                    <del>￥1222</del>
+                                </div>
+                                <button type="button" class="mui-btn mui-btn-primary">立即购买</button>
+                            </a>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
-    </section>
-    <!-- 导航部分 -->
-    <nav id="navs"></nav>
-    <!-- 品牌专区 -->
-    <section id="brand"></section>
-    <!-- 运动生活专区 -->
-    <section id="active"></section>
-    <!-- 女士专区 -->
-    <section id="girl"></section>
-    <!-- 男士专区 -->
-    <section id="boy"></section>
-    <footer id="footer"></footer>
+    </div>
+
+    <!-- 底部 -->
+    <footer id="footer">
+        <a href="./index.html" class="fa fa-home active"><span>首页</span></a>
+        <a href="./category.html" class="fa fa-bars">
+            <span>分类</span>
+        </a>
+        <a href="./shoppingCar.html" class="fa fa-shopping-cart">
+            <span>购物车</span>
+        </a>
+        <a href="./user.html" class="fa fa-user">
+            <span>会员中心</span>
+        </a>
+    </footer>
 
 
     <!-- 5、引入mui的js 文件提供js特效之类的  -->
@@ -89,5 +384,8 @@
     <script src="./lib/artTemplate/template.js"></script>
     <!-- 8、引入自己的js文件 -->
     <script src="./js/index.js"></script>
+    
+   
 </body>
+
 </html>
